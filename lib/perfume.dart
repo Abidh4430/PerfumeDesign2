@@ -37,13 +37,28 @@ class PerfumeDesign extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.green,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
-        title: Text("WOVEN STYLES"),
+        leading: Icon(Icons.menu),
+        title: Text("ZAHAAR"),
         centerTitle: true,
         actions: [
-          Icon(Icons.chat),
+          Icon(Icons.chat_rounded),
           SizedBox(width: 5),
-          Icon(Icons.shopping_bag),
+          Stack(children: [
+            Icon(Icons.shopping_bag),
+            Positioned(
+              top: 12,
+              right: 3,
+              child: CircleAvatar(
+              radius: 6,
+              backgroundColor: Colors.orange,
+              child: Text("1",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 5,
+                fontWeight: FontWeight.bold
+          ),),
+          ),),
+          ],)
         ],
       ),
       body: GridView.builder(
@@ -80,7 +95,7 @@ class PerfumeDesign extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      height: 300, // Adjust height
+                      height: 300, 
                       width: double.infinity,
                     ),
                   ),
