@@ -6,8 +6,9 @@ class DescriptionScreen extends StatelessWidget {
   String? name;
   String? price;
   String? price1;
+  String? text;
 
-  DescriptionScreen({super.key, required this.imageUrl, required this.name, required this.price,required this.price1});
+  DescriptionScreen({super.key, required this.imageUrl, required this.name, required this.price,required this.price1,required this.text});
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -27,15 +28,19 @@ class DescriptionScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(15)),
             
             ),
-            SizedBox(height: 15),
             Text(name!,
             style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
             SizedBox(height: 20,),
-            Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
-            ,style: TextStyle(fontSize: 18),),
-            SizedBox(height: 30,),
+
+             Text(text!,
+            style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,),
+             
+            ),
+            
+            Text("price:\$${price1!}",style: TextStyle(fontSize: 34,fontWeight: FontWeight.bold,color: Colors.green),),
             Text("price:\$${price!}",
-            style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
+            style: TextStyle(decoration: TextDecoration.lineThrough,color: Colors.red,
+              fontSize: 35,fontWeight: FontWeight.bold),),
             SizedBox(height: 30,),
             SizedBox(
               height: 50,
@@ -44,6 +49,7 @@ class DescriptionScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
+                  
                 ),
                 onPressed: () {
                   

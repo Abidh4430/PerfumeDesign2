@@ -12,24 +12,28 @@ class PerfumeDesign extends StatelessWidget {
       "name":"The One For Men",
       "price":"AED510.00",
       "price1":"AED339.00",
+      "text":"The One for Men by Dolce&Gabbana is a Woody Spicy fragrance for men. The One for Men was launched in 2008. The nose behind this fragrance is Olivier Polge. Top notes are Grapefruit, Coriander and Basil; middle notes are Ginger, Cardamom and Orange Blossom; base notes are Amber, Tobacco and Cedar.",
     },
     {
       "image":"assets/images/fernando-andrade-potCPE_Cw8A-unsplash.jpg",
       "name":"Acqua Di Gio Profondo",
       "price":"AED465.00",
       "price1":"AED339.00",
+      "text":"Acqua di Giò Profondo Parfum by Giorgio Armani is a Aromatic Aquatic fragrance for men. This is a new fragrance. Acqua di Giò Profondo Parfum was launched in 2024. Top notes are Marine notes and Green Mandarin; middle note is Mimosa; base notes are Patchouli and Labdanum.",
     },
     {
       "image":"assets/images/jeroen-den-otter-2b0JeJTEclQ-unsplash.jpg",
       "name":"Sauvage",
       "price":"AED590.00",
       "price1":"AED450.00",
+      "text":"Sauvage unfurls a scent of a rare intensity, like a fine liqueur with exceptional ingredients that pushes all the limits. Inspired by wide-open spaces, this pioneer continues to reach for the summits, now intertwining its destiny with that of Baccarat in a bottle reinterpreted with extraordinary luminosity.",
     },
     {
       "image":"assets/images/jessica-weiller-So4eFi-d1nc-unsplash.jpg",
       "name":"Grain de Poudre",
       "price":"AED995.00",
       "price1":"AED585.00",
+      "text":"Grain de Poudre by Yves Saint Laurent is a Leather fragrance for women and men. Grain de Poudre was launched in 2019. The nose behind this fragrance is Quentin Bisch.An oriental spicy scent fusing an aromatic sage with crispy violet leaf. The scent of GRAIN DE POUDRE translates this bold alchemy by draping the familiar, powdery fragrance of Violet in the coolness of Sage.",
     },
   ];
 
@@ -86,7 +90,9 @@ class PerfumeDesign extends StatelessWidget {
                               builder: (context) => DescriptionScreen(
                                   imageUrl: perfumeList[index]["image"],
                                   name: perfumeList[index]["name"],
-                                  price: perfumeList[index]["price"], price1: perfumeList[index]['price1'],)));
+                                  price: perfumeList[index]["price"],
+                                   price1: perfumeList[index]['price1'],
+                                    text: perfumeList[index]['text'],)));
                     },
                     child: Container(
                       decoration: BoxDecoration(
